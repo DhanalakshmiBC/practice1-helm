@@ -17,6 +17,6 @@ spec:
   selector:
     app.kubernetes.io/instance: deepu
     app.kubernetes.io/name: appforgit
-  type: clusterIP
+  type: ClusterIP
 status:
   loadBalancer: {}
