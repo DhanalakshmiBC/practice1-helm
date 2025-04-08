@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/instance: deepu
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: appforgit
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: appforgit-0.1.0
+  name: deepu-svc
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app.kubernetes.io/instance: deepu
+    app.kubernetes.io/name: appforgit
+  type: clusterIP
+status:
+  loadBalancer: {}
