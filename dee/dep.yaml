@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deepu
+  name: deepu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deepu
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deepu
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
