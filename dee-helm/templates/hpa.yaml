@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "kindl.fullname" . }}
+  name: {{ include "dee-helm.fullname" . }}
   labels:
-    {{- include "kindl.labels" . | nindent 4 }}
+    {{- include "dee-helm.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "kindl.fullname" . }}
+    name: {{ include "dee-helm.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

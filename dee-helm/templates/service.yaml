@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "kindl.fullname" . }}
+  name: {{ include "dee-helm.fullname" . }}
   labels:
-    {{- include "kindl.labels" . | nindent 4 }}
+    {{- include "dee-helm.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "kindl.selectorLabels" . | nindent 4 }}
+    {{- include "dee-helm.selectorLabels" . | nindent 4 }}
